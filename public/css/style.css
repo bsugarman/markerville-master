@@ -103,6 +103,9 @@ display:table-row-group;
   }
 
 
+#result table{
+  width: 100%;
+}
 
 
 #forum th {
