@@ -1,7 +1,6 @@
 //make sure is called
 async function onSearchData(event) {
   event.preventDefault();
-  table.style = "display: block";
   const input = document.querySelector('#word-input');
   const word = input.value.trim();
   const results = document.querySelector('#database');
