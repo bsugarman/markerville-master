@@ -14,7 +14,7 @@ async function onSearchData(event) {
   if(associated.length != 0 && word.length!=0){
 
   for (let obj in associated){
-    var newRow   = table.insertRow(tableRef.rows.length);
+    var newRow   = table.insertRow(tableFull.rows.length);
     
     var newCellOne  = newRow.insertCell(0);
     newCellOne.innerHTML = associated[obj].markerName;
