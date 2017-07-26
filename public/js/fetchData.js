@@ -8,10 +8,11 @@ async function onSearchData(event) {
   const json = await result.json();
   const resultWord = json.word;
   const associated = json.associated;
-
+  var count = 0;
   if(associated.length != 0 && word.length!=0){
 
   for (let obj in associated){
+    count++;
     let row = document.createElement('tr');
 
     let name = document.createElement('td');
@@ -37,6 +38,7 @@ async function onSearchData(event) {
 
     table.appendChild(row);
     }
+    console.log(count);
 
 }
 }
