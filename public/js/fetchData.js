@@ -13,7 +13,6 @@ async function onSearchData(event) {
 
   for (let obj in associated){
     let row = document.createElement('tr');
-    row.style = "display:table-row-group;";
 
     let name = document.createElement('td');
     name.innerHTML = associated[obj].markerName;
