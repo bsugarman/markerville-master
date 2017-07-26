@@ -88,7 +88,7 @@
   color: white;
 }
 
-  #result td, #result th{
+  #result tbody td, #result thead th{
     word-wrap: break-word;
     width: 25vw;
     color: white;
