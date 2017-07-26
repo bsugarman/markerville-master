@@ -62,7 +62,7 @@
   width:20%;
 }
 
-#result body
+#result tbody
 {
 display:table-row-group;
 }
