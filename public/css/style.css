@@ -55,8 +55,13 @@
 #result thead tr
 {
   width:98%;
-  position: fixed !important;
 }
+
+#result tbody tr
+{
+  width:98%;
+}
+
 
 
    @media (max-width: 700px){
