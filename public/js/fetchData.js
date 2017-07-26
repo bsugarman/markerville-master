@@ -1,4 +1,3 @@
-
 //make sure is called
 async function onSearchData(event) {
   event.preventDefault();
@@ -14,39 +13,35 @@ async function onSearchData(event) {
   if(associated.length != 0 && word.length!=0){
 
   for (let obj in associated){
-    var newRow   = table.insertRow(0);
+    let row = document.createElement('tr');
     
-    var newCellOne  = newRow.insertCell(0);
-    newCellOne.innerHTML = associated[obj].markerName;
-    newRow.appendChild(newCellOne);
+    let name = document.createElement('td');
+    name.innerHTML = associated[obj].markerName;
+    row.appendChild(name);
 
-    var newCellTwo  = newRow.insertCell(1);
-    newCellTwo.innerHTML = associated[obj].biomarkerType;
-    newRow.appendChild(newCellTwo);
-
-
-    var newCellThree  = newRow.insertCell(2);
-    newCellThree.innerHTML = associated[obj].diseaseType;
-    newRow.appendChild(newCellThree);
+    let bioType = document.createElement('td');
+    bioType.innerHTML = associated[obj].biomarkerType;
+    row.appendChild(bioType);
 
     
-    var newCellFour  = newRow.insertCell(3);
-    newCellFour.innerHTML = associated[obj].associatedDrug;
-    newRow.appendChild(newCellFour);
+    let disease = document.createElement('td');
+    disease.innerHTML = associated[obj].diseaseType;
+    row.appendChild(disease);
 
+    let drug = document.createElement('td');
+    drug.innerHTML = associated[obj].associatedDrug;
+    row.appendChild(drug);
 
-    var newCellFive  = newRow.insertCell(4);
-    newCellFive.innerHTML = associated[obj].medium;
-    newRow.appendChild(newCellFive);
+    let mediumType = document.createElement('td');
+    mediumType.innerHTML = associated[obj].medium;
+    row.appendChild(mediumType);
 
-
-    table.insertRow(tableFull.rows.length);
-   
+    table.appendChild(row);
     }
 
 }
 }
 const tableFull = document.querySelector('#result table');
-const table = tableFull.getElementsByTagName('tbody')[0];
+const table = tableFull.getElementsByTagName('tbody');
 const searchForm = document.querySelector('#searchForm');
 searchForm.addEventListener('submit', onSearchData);
