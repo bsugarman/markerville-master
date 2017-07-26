@@ -37,7 +37,7 @@ async function onSearchData(event) {
     mediumType.innerHTML = associated[obj].medium;
     row.appendChild(mediumType);
 
-    table.appendChild(row);
+    table.insertRow(row);
     }
 
 }
