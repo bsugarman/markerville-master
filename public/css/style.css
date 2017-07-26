@@ -54,14 +54,8 @@
 
 #result thead tr
 {
-  width:98%;
+  width:100%;
 }
-
-#result tbody td
-{
-  width:20%;
-}
-
 
 
    @media (max-width: 700px){
