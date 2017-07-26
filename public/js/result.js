@@ -1,7 +1,7 @@
 class Result {
 
   constructor(containerElement){
-    this.prevTable = document.querySelector("#result table tbody");
+    this.prevTable = document.querySelector("#result table");
     this.message = document.querySelector('#result p');
     this.prevTableRows = this.prevTable.getElementsByTagName('tr');
     this.containerElement = containerElement;
