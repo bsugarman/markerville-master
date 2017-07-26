@@ -69,55 +69,6 @@
    }
 
 
-#result table {
-    display: table;
-    width: 100vw;
-    border-collapse: separate;
-    border-spacing: 2px;
-    border-color: gray
-}
-
-#result thead {
-    display: table-header-group;
-    vertical-align: middle;
-    border-color: inherit
-}
-
-#result tbody {
-    display: table-row-group;
-    vertical-align: middle;
-    border-color: inherit
-}
-
-
-#result table > tr {
-    vertical-align: middle;
-}
-
-#result col {
-    display: table-column
-}
-
-#result colgroup {
-    display: table-column-group
-}
-
-#result tr {
-    display: table-row;
-    vertical-align: inherit;
-    border-color: inherit
-}
-
-#result td, th {
-    display: table-cell;
-    vertical-align: inherit
-}
-
-#result th {
-    font-weight: bold
-}
-
-
   #forum-table-cont, #result-table-cont {
     align-items: center;
     text-align: center;
@@ -137,7 +88,7 @@
   color: white;
 }
 
-  #result td{
+  #result td, #result th{
     word-wrap: break-word;
     width: 25vw;
     color: white;
