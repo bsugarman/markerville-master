@@ -15,7 +15,7 @@ class Result {
   hide(){
 
     this.containerElement.classList.add('inactive');
-    this.prevtable.innerHTML = "";
+    this.prevTable.innerHTML = "";
 }
 
 
