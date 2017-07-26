@@ -43,6 +43,6 @@ async function onSearchData(event) {
 }
 }
 const tableFull = document.querySelector('#result table');
-const table = tableFull.getElementsByTagName('tbody');
+const table = tableFull.getElementsByTagName('tbody')[0];
 const searchForm = document.querySelector('#searchForm');
 searchForm.addEventListener('submit', onSearchData);
