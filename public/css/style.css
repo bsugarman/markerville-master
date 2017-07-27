@@ -76,9 +76,15 @@
     text-align: center;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     color: blue;
-      width: 90vw;
+      width: 100vw;
   
  }
+
+#result table{
+  width:90%;
+   align-items: center;
+   justify-content: center;
+}
 
   #forum-table-cont{
     align-items: center;
