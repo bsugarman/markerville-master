@@ -4,9 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>MarkerVille</title>   
-    <script src="js/jquery.js"></script>
-    <script src="js/jquery-migrate-1.2.1.min.js"></script>
     <link rel="stylesheet" href="css/style.css"/>
+    <!-- <link rel="stylesheet" type="text.css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css"/> -->
+    <script src="js/jquery.js"> </script>
+    <script src="js/jquery-migrate-1.2.1.min.js"></script>
     <script src="js/result.js" defer></script>
     <script src="js/about.js" defer></script>
     <script src="js/forum.js" defer></script>
@@ -15,17 +16,10 @@
     <script src="js/main.js" defer></script>
     <script src="js/fetchData.js" defer></script>
     <script src="js/fetchForum.js" defer></script>
-    <link rel="stylesheet" type="text.css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css"/>
-
-    <script type="text/javascript"  src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
-
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
     </head>
-  <script type="text/javascript">
-  $(document).ready(function(){
-    $('#result table').DataTable();
-  });
-    
- </script>
+
       <body>
           <div class = "navBar">
               <div class = "button" id = "databaseButton" > Biomarker Search  </div>
@@ -74,22 +68,28 @@
               <div id = "result-table-cont">
 
                <table class ="display">  
-                <thead>
-               <tr>
-                <th> Biomarker Name
-                <th> Biomarker Type
-                <th> Disease 
-                <th> Associated Drug
-                <th> Medium
-               </tr>
-               </thead> 
+               <thead>
+               <tr> A
+                <th> B
+                <th> C 
+                <th> D
+                <th> E
+                 </tr>
+               </thead>
                <tbody>
-          
+             
                </tbody> 
-               <tfoot>
-               </tfoot>
                      
              </table>
+          <!-- <script src="js/jquery.min.js"> </script>
+          <script src="js/jquery.dataTables.min.js"></script>
+          <script src="js/dataTables.jqueryui.min.js"></script> -->
+               <script type="text/javascript">
+                $(document).ready(function(){
+                  $('#result table').DataTable();
+                });
+              </script>
+
            </div>
           </div>
 
