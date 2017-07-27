@@ -87,10 +87,9 @@
                <script type="text/javascript">
                $(document).ready(function() {
                      $('#results table').dataTable( {
-                          ajax:           '/api/data',
-                          scrollY:        200,
-                          deferRender:    true,
-                          scroller:       true
+                        "bScrollInfinite": true,
+                         "bScrollCollapse": true,
+                         "sScrollY": "200px"
                       } );
                   } );
               </script>
