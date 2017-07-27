@@ -85,9 +85,13 @@
           <script src="js/jquery.dataTables.min.js"></script>
           <script src="js/dataTables.jqueryui.min.js"></script> -->
                <script type="text/javascript">
-                $(document).ready(function(){
-                  $('#result table').DataTable();
-                });
+               $(document).ready(function() {
+                      $('#result table').DataTable( {
+                          "processing": true,
+                          "serverSide": true,
+                          "ajax": "../server_side/scripts/server_processing.php"
+                      } );
+                  } );
               </script>
 
            </div>
