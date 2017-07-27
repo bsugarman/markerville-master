@@ -80,10 +80,10 @@
   
  }
 
-#result table{
+#DataTables_Table_0_wrapper{
   width:90%;
-   align-items: center;
-   justify-content: center;
+    justify-content: center;
+    text-align: center;
 }
 
   #forum-table-cont{
