@@ -69,7 +69,14 @@
     }
    }
 
-
+#result-table-cont {
+   align-items: center;
+    text-align: center;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    color: white;
+      width: 100vw;
+  
+ }
 
   #forum-table-cont{
     align-items: center;
