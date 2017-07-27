@@ -41,7 +41,7 @@
 
 
 
-  #database, #aboutPage, #forum, #result{
+  #database, #aboutPage, #forum{
 
     padding-top: 50px;
     min-height: 100vh;
@@ -69,16 +69,6 @@
     }
    }
 
-#result-table-cont {
- 
-   align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    color: blue;
-      width: 100vw;
-  
- }
 
 #DataTables_Table_0_wrapper{
       margin: auto;
