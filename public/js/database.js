@@ -1,7 +1,7 @@
 class Database {
   constructor(containerElement){
     this.containerElement = containerElement;
-    this.prevTable = document.querySelector("#result table tbody");
+    var table = $('#result table').DataTable();
     this.message = document.querySelector('#result p');
     this.clearDatabase = this.clearDatabase.bind(this);
   }
@@ -18,7 +18,7 @@ class Database {
   }
 
   clearDatabase(){
-    this.prevTable.innerHTML = "";
+    table.clear().draw();
   }
 
 }
