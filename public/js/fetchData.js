@@ -1,5 +1,6 @@
 //make sure is called
 async function onSearchData(event) {
+  var table = $('#result table').DataTable();
   event.preventDefault();
   const input = document.querySelector('#word-input');
   const word = input.value.trim();
@@ -36,12 +37,11 @@ async function onSearchData(event) {
     mediumType.innerHTML = associated[obj].medium;
     row.appendChild(mediumType);
 
-    table.appendChild(row);
+    table.row.add(row);
     }
     console.log(count);
 
 }
 }
-const table = document.querySelector('#result table tbody');
 const searchForm = document.querySelector('#searchForm');
 searchForm.addEventListener('submit', onSearchData);
