@@ -36,7 +36,6 @@ async function onForumPost(event) {
   .then(onTextReady);
 
     }
-    onOpenForum(event);
 }
 
 
