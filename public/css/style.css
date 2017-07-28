@@ -95,19 +95,6 @@
 }
 
 
-#forum th {
-  width: 50vw;
-
-  border-bottom: 1px solid white;
-  color: white;
-}
-
-
-  #forum td {
-    width: 50vw;
-    color: white;
-  }
-
 
 #message-post-cont{
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
