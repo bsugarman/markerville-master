@@ -46,5 +46,4 @@ async function onForumPost(event) {
 const forumForm = document.querySelector('#forumForm');
 forumForm.addEventListener('submit', onForumPost);
 
-const forumButton = document.querySelector('#forumButton');
-forumButton.addEventListener('click', onOpenForum);
+
