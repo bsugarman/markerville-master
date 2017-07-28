@@ -3,6 +3,7 @@ const MongoClient = require('mongodb').MongoClient;
 const ObjectID = require('mongodb').ObjectID;
 const bodyParser = require('body-parser');
 const jsonParser = bodyParser.json();
+const paginate = require('mongo-paginate');
 
 const app = express();
 app.use(express.static('public'));
@@ -24,36 +25,36 @@ collectionForum = db.collection('forum');
 
 startServer();
 
+async function onLookupWord(req, res, next) {
+  const routeParams = req.params;
+  const word = routeParams.word;
 
+  const query =   { $or: [{markerName: word}, {biomarkerType: word}, {diseaseType: word}, {associatedDrug: word}, {medium: word}] };
 
-async function onLookupWord(req, res) {
-   const routeParams = req.params;
-   const word = routeParams.word;
+  const cursor = collection.find(query)
+  res.status(200).paginate(cursor, { limit: 100 })
+});
 
-   const query =   { $or: [{markerName: word}, {biomarkerType: word}, {diseaseType: word}, {associatedDrug: word}, {medium: word}] };
+//    const formattedResults = results.map(function(result) {
+//      return {
+//        markerName: result.markerName,
+//        biomarkerType: result.biomarkerType,
+//        diseaseType: result.diseaseType,
+//        associatedDrug: result.associatedDrug,
+//        medium: result.medium
+//      }
+//    });
 
-   const results = await collection.find(query, function(err, cursor) {
-     return cursor.toArray();
-   });
+//     const response = {
+//       word: word,
+//       associated: formattedResults
+//     };
 
-   const formattedResults = results.map(function(result) {
-     return {
-       markerName: result.markerName,
-       biomarkerType: result.biomarkerType,
-       diseaseType: result.diseaseType,
-       associatedDrug: result.associatedDrug,
-       medium: result.medium
-     }
-   });
-
-    const response = {
-      word: word,
-      associated: formattedResults
-    };
-
-    res.json(response);
+//     res.json(response);
 }
-  app.get('/lookup/:word' , onLookupWord);
+
+paginate.extend(app);
+app.get('/lookup/:word' , onLookupWord);
 
 
   async function getForum(req, res) {
