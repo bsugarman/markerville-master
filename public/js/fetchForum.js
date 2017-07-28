@@ -9,11 +9,6 @@ return response.text();
 
 async function onForumPost(event) {
   event.preventDefault();
-  let forumTable = document.querySelector('#forum table');
-  for (let i = 1; i<forumTable.rows.length-1; i++) {
-    forumTable.removeChild(forumTable.rows[i]);
-  }
-
    messageRaw = document.querySelector('#message-post');
    const messagePost = messageRaw.value.trim();
 
