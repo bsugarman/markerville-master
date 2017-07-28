@@ -1,30 +1,3 @@
-async function onOpenForum(event) {
-  event.preventDefault();
-  let forumTable = document.querySelector('#forum table');
-
-  for (let i = forumTable.rows.length-1; i>0; i--) {
-    forumTable.deleteRow(i);
-  }
-
-  const forumPage = document.querySelector('#forum');
-  const result = await fetch('/getForum/');
-  const json = await result.json();
-  const forumSheet = json.forumSheet;
-
-
-for (let obj in forumSheet){
-
-  let row = document.createElement('tr');
-  let question = document.createElement('td');
-  question.innerHTML = forumSheet[obj].question;
-  row.appendChild(question);
-  let answer = document.createElement('td');
-  answer.innerHTML = forumSheet[obj].answer;
-  row.appendChild(answer);
-  forumTable.appendChild(row);
-}
-
-}
 
 async function onTextReady(text) {
 console.log(text);
