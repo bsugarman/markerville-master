@@ -56,8 +56,7 @@
                                 {data : "C"},
                                 {data : "D"},
                                 {data : "E"},
-                                {data : "F"},
-                                 {data : "G"}
+                                {data : "F"}
                               ],
                     processing: true,
                       "sDom": "Rlfrtip",
@@ -76,5 +75,20 @@
 
            </div>
           </div>
+
+           <div id = "database">
+
+              <p> Welcome to MarkerVille! <br>Search by biomarker, drug, or cancer type: </p>
+              <div>
+
+              <form id="searchForm" onsubmit="return false">
+                <input type= "search" id="word-input" placeholder="Enter search here"onblur="this.placeholder='Enter search here'" onfocus="this.placeholder = ''"/>
+              </form>
+              </div>
+              <div class = "logo-cont">
+                <img class="logo" src = "images/logo.png"> </img>
+              </div>
+        </div>
+
   </body>
 </html>

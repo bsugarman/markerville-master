@@ -37,7 +37,6 @@ async function onSearchData(event) {
    
     rowToAdd[5] = associated[obj].sixth;
    
-    rowToAdd[6] = associated[obj].kind;
 
 
 
