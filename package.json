@@ -1,11 +1,10 @@
 {
-  "name": "Clinical-Data",
+  "name": "clinical-data",
   "version": "1.0.0",
   "description": "database",
   "main": "server.js",
   "engines": {
-//    "node": "8.2.1"
-  "node": "7.10.0"
+    "node": "8.2.1"
   },
   "dependencies": {
     "body-parser": "^1.17.1",
@@ -19,5 +18,14 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Brandon Sugarman",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bsugarman/clinical-data.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bsugarman/clinical-data/issues"
+  },
+  "homepage": "https://github.com/bsugarman/clinical-data#readme"
 }
