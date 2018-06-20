@@ -52,11 +52,11 @@ async function onLookupWord(req, res) {
  
     
 
-   const results = await collection.find(query, function(err, cursor) {
+   const resultsTest = await collection.find(query, function(err, cursor) {
      return cursor.batchSize(10).toArray();
    });
  
-           console.log(results);
+           console.log(resultsTest);
 
 
 
