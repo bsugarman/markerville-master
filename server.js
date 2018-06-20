@@ -68,9 +68,9 @@ async function onLookupWord(req, res) {
     res.json(response);
 }
 
-  //app.get('/lookup/:word/:lastId?' , onLookupWord);
+  app.get('/lookup/:word/:lastId?' , onLookupWord);
 
-console.log("hey");
+
 
 
 // Please don't change this; this is needed to deploy on Heroku.
