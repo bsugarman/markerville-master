@@ -18,5 +18,63 @@
 
   <body>
   
+  
+          <div id = "result" class="inactive">
+              <div id = "result-table-cont">
+
+               <table id ="testid" class="display" cellspacing="0" width="100%">  
+           
+               <tbody>
+             
+               </tbody> 
+                     
+             </table>
+                        <button id="next100results"> Next 100 </button>
+
+      
+  <script type="text/javascript">
+            $(document).ready( function () {
+                              $('#testid').DataTable();
+            
+            } );
+               $(document).ready(function() {
+                    $('a[data-toggle="tab"]').on( 'shown.bs.tab', function (e) {
+                       $($.fn.dataTable.tables(true)).DataTable().columns.adjust();
+                    } );
+                  } );
+            </script>
+            
+               <script type="text/javascript">
+                    var table = $('#testid').DataTable( {
+                      
+                   fnInitComplete: function (settings, json) {
+                                new FixedHeader(table);
+                              },
+                              columns: [
+                                {data : "A"},
+                                {data : "B"},
+                                {data : "C"},
+                                {data : "D"},
+                                {data : "E"},
+                                {data : "F"},
+                                 {data : "G"}
+                              ],
+                    processing: true,
+                      "sDom": "Rlfrtip",
+ 
+     
+                         autoWidth: false,
+                        buttons: [ 'copy', 'pdf', 'csv' 'colvis' ]
+                    } );
+                    table.buttons().container()
+                        .insertBefore( '#testid_filter' );
+                 
+                 
+                </script>
+
+        
+
+           </div>
+          </div>
   </body>
 </html>
